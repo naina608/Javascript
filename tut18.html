@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in Javascript</title>
+</head>
+<body>
+    <p id="thapa">Thapa</p>
+    <p class="welcome">Technical</p>
+
+    <!-- access element by id -->
+    <script>
+        var a=document.getElementById("thapa");
+        var b=document.getElementById("thapa").innerHTML;//it will take the data inside the tag
+        document.write(a);
+        document.write("<br>");
+        document.write(b);
+        document.write("<br>");
+    </script>
+
+    <!-- access element by class -->
+    <script>
+        var c=document.getElementsByClassName("welcome")[0].innerHTML;//specify index as mutiple element can have same class
+        document.write(c);
+        document.write("<br>");
+    </script>
+
+    <!-- access element by tag name -->
+    <script>
+        var tag=document.getElementsByTagName("p");
+        document.write(tag);
+        document.write("<br>");
+        console.log(tag);
+    </script>
+
+    <!-- access first element -->
+    <script>
+        var p=document.querySelector("p").innerHTML;//it gives the first element of the tag name p
+        document.write(p);
+    </script>
+</body>
+</html>

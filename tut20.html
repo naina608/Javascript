@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="thapa">thapa</p>
+    <p id="welcome">technical</p>
+    <p id="welcome">technical 1</p>
+    <p id="welcome">technical 2</p>
+
+    <ul><li>like</li>
+        <li>share</li>
+        <li>subscribe</li></ul>
+    <script>
+        var child=document.body.children;
+        console.log(child);
+
+        //add a new child in the body
+        var para=document.createElement("p");//pass the tag it can be ul,li etc
+        var textNode=document.createTextNode("This is a new para.");
+        para.appendChild(textNode);
+        document.body.appendChild(para);
+
+        //access first child and last child
+        var list=document.querySelector("ul");
+         console.log(list.firstChild);//spaces hta  dene ul li k beech vrna space ko first child consider krega
+        console.log(list.lastChild);
+
+        //acess sibling
+        var firstsibiling=thapa.nextElementSibling;
+        console.log(firstsibiling);
+        var secondsibling=thapa.nextElementSibling.nextElementSibling;
+        console.log(secondsibling);
+
+        //access parent
+        console.log(list.parentNode);
+</script>
+</body>
+</html>

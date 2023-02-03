@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <h3>Enter you choice</h3>
+    <ul>
+        <li>add</li>
+        <li>sub</li>
+        <li>mul</li>
+    </ul>
+    <form action="backend.php">
+        <input type="text" name="" id="choices">
+        <br>
+        <button onclick="myfunc()">Click me</button>
+    </form>
+    <script>
+        function myfunc(){
+        var choice=document.getElementById("choices").value;
+        switch(choice){
+            case "add":
+                var a=10;
+                var b=20;
+                var sum=a+b;
+                document.write("addition of two numbers is "+sum);
+                break;
+            case "sub":
+                var a=30;
+                var b=15;
+                var difference=a-b;
+                document.write("difference of two numbers is "+difference);
+                break;
+            case "mul":
+                var a=2;
+                var b=3;
+                var product=a*b;
+                document.write("product of two numbers is "+product);
+                break;
+            default:
+                alert("NOT A VALID INPUT");
+
+        }
+        }
+    </script>
+</body>
+</html>
